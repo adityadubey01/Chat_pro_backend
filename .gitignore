@@ -1,0 +1,104 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@adityadubey01 
+kaelzhang
+/
+node-ignore
+Public
+Code
+Issues
+5
+Pull requests
+1
+Actions
+Projects
+Wiki
+Security
+Insights
+node-ignore/.gitignore
+@kaelzhang
+kaelzhang 5.0.5: fixes #50: removes executable permission from several files
+Latest commit 546ada4 on Jan 26, 2019
+ History
+ 1 contributor
+61 lines (54 sloc)  530 Bytes
+   
+# test
+test/ts/*.js
+
+# coverage
+coverage
+.nyc_output
+/legacy.js
+
+# yarn
+*.lock
+
+# php files
+index.php
+
+# Numerous always-ignore extensions
+*.bak
+*.patch
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+*.sass-cache
+package-lock.json
+
+# npm package
+*.tgz
+
+# OS or Editor folders
+.DS_Store
+._*
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+*.sublime-project
+nbproject
+thumbs.db
+*.*-workspace
+
+# Folders to ignore
+.hg
+.svn
+.CVS
+.idea
+node_modules
+old/
+*-old/
+*-notrack/
+no-track/
+build/
+combo/
+reference/
+jscoverage_lib/
+temp/
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
