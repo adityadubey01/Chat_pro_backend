@@ -1,9 +1,21 @@
 const express = require("express");
-const dotenv = require('dotenv');
-const {chats} = require("./data/data");
+// const dotenv = require('dotenv');
+// dotenv.config();
+const path = require('path');
+// require('dotenv').config({path:
+// path.resolve(__dirname , './.env')});
 
+require('dotenv').config({ path: '../.env' });
+const colors = require('colors');
+
+const {chats} = require("./data/data");
+const connectDB = require('./config/db');
+
+
+connectDB();
 const app = express();
-dotenv.config();
+
+
 app.get("/" , (req , res)=>{
     res.send("API is running successfully...");
 });
@@ -19,4 +31,4 @@ app.get("/api/chat/:id" , (req , res)=>{
 })
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT , console.log(`Server started on Port ${PORT}`));
+app.listen(PORT , console.log(`Server started on Port ${PORT}`.yellow.bold));
