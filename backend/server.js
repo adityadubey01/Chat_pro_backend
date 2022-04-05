@@ -6,10 +6,11 @@ const path = require('path');
 // path.resolve(__dirname , './.env')});
 
 require('dotenv').config({ path: '../.env' });
-const colors = require('colors');
-
 const {chats} = require("./data/data");
 const connectDB = require('./config/db');
+const colors = require('colors');
+const userRoutes = require('./routes/userRoutes');
+
 
 
 connectDB();
@@ -19,6 +20,8 @@ const app = express();
 app.get("/" , (req , res)=>{
     res.send("API is running successfully...");
 });
+
+// app.use('/api/user' , userRoutes)
 
 app.get("/api/chat" , (req , res)=>{
     res.send(chats);
